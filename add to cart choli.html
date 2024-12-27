@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KARAGIRI</title>
+    <link rel="stylesheet" href="deginer.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+    <style>
+        /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+} */
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.my-cart {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content */
+.product-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.product-images {
+    width: 50%;
+}
+
+.product-images img.main-image {
+    width: 80%;
+    height: 600px;
+}
+
+.thumbnail-images {
+    display: flex;
+    margin-top: 10px;
+}
+
+.thumbnail-images img {
+    width: 90px;
+    height: 90px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.product-details {
+    width: 45%;
+}
+
+.product-details h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin: 10px 0;
+}
+
+.star {
+    color: gold;
+}
+
+.half-star {
+    color: orange;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.color-options,
+.size-options,
+.order-details {
+    margin-top: 20px;
+}
+
+.color-swatch span {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-swatch .black {
+    background-color: black;
+}
+
+.color-swatch .cream {
+    background-color: #f5f5f5;
+}
+
+.color-swatch .green {
+    background-color: green;
+}
+
+.color-swatch .blue {
+    background-color: blue;
+}
+
+.color-swatch .red {
+    background-color: red;
+}
+
+.size-buttons button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.order-details ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.order-details textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.order-details button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.subtotal {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buy-now,
+.add-to-cart {
+    padding: 15px 30px;
+    margin-top: 10px;
+    border: none;
+    background-color: #474747;
+    color: white;
+    cursor: pointer;
+}
+
+.buy-now {
+    background-color:rgb(117, 21, 21);
+}
+
+.add-to-cart {
+    background-color: #176717;
+}
+
+.product-description,
+.related-products {
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.product-description h3 {
+    font-size: 24px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-grid .product {
+    text-align: center;
+}
+
+.product-grid .product img {
+    width: 100%;
+    height: auto;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <h1 style="letter-spacing: 0.10px;">KARAGIRI</h1>  
+        <div class="navbar-address border">
+            <p class="add-first">Deliver to</p>
+            <div class="add-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="add-second">india</p>
+        </div>
+    </div>
+    <div class="nav-search">
+        <!-- <select class="search- select">
+            <option></option>
+        </select> -->
+        <input placeholder="search" class="search-input">
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    <div class="nav -signin border" >
+        <p><span>Hello, sign in</span></p>
+        <p class="nav-second"> Account &Lists</p>
+    </div>
+    <div class="nav-retuns border">
+        <p><span>retuns</span></p>
+        <p class="nav nav-second">& orders</p>
+    </div>
+    <div class="nav-cart border">
+        <i class="fa-solid fa-cart-shopping"></i>
+        cart
+    </div>
+    </div>
+    <!--menu-bar-->
+    <ul>
+        
+        <li><a href="index.html">HOME</a>
+        </li>
+        <li class="dropdown">
+
+            <a href="javascript:void(0)" class="dropbtn">LEHENGA CHOLI</a>
+            <div class="dropdown-content">
+              
+              <a href="Wedding Lehenga.html">Wedding Lehenga</a>
+              
+              <!-- <a href="Wedding Lehenga.html">Bandhani lehenga</a> -->
+              
+              </div>
+        </li>
+             
+                  <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">SAREES</a>
+                    <div class="dropdown-content">
+                      <a href="Saree.html">Bridal Saree</a>
+                      <!-- <a href="Saree.html">Bandhani Saree</a> -->
+                      </div>
+                      </li>
+                      <li class="dropdown">
+                        <a href="party dress.HTML" >PARTYWEAR SAREES</a>
+            
+                          </div>
+                          </li>
+                          
+                        </li>
+                        
+                            </ul>
+</div>
+</div>
+</header>
+<div class="hea1">
+<h1>Karagiri</h1></div>
+<div class="prg">
+<p>Festive Sarees | Karwa Chauth Sarees | Diwali Sarees | Onam Sarees | Navratri Sarees | Parsi Gara Sarees | Durga Puja Sarees 
+| Dussehra Sarees | Ganpati Sarees |  Raksha Bandhan Sarees | Chhath Puja Saree | Designer Fancy Sarees | Net Saree |  Party
+ Wear Sarees | Indian Wedding Saree |  Plain Sarees | Bollywood Sarees | Daily Wear Sarees
+
+</p></div>
+    
+
+    <main>
+        <div class="product-container">
+            <div class="product-images">
+                <img src="saree image/choli-1.webp" alt="Product Image" class="main-image">
+                <div class="thumbnail-images">
+                    <img src="saree image/choli-1.1.webp" alt="Thumbnail 1" style="margin-left: 80px;">
+                    <img src="saree image/choli-1.2.avif" alt="Thumbnail 2">
+                    <img src="saree image/choli-1.3.avif" alt="Thumbnail 3">
+                </div>
+            </div>
+            <div class="product-details">
+                <h1>Brown-Turquoise Blue Color Bridal Net Embroidered Gotta Patti Lehenga</h1>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star half-star">★</span>
+                    <span>(4.5)</span>
+                    <span>623 reviews</span>
+                </div>
+                <p>1,919 Sold</p>
+                <p class="price">$699.00</p>
+
+                <div class="color-options">
+                    <h3>Select Color</h3>
+                    <div class="color-swatch">
+                        <span class="black"></span>
+                        <span class="cream"></span>
+                        <span class="green"></span>
+                        <span class="blue"></span>
+                        <span class="red"></span>
+                    </div>
+                </div>
+
+                <div class="size-options">
+                    <h3 style="padding-top: 5px;">Select Size</h3>
+                    <div class="size-buttons">
+                        <button>L</button>
+                        <button>XL</button>
+                        <button>XXL</button>
+                    </div>
+                    
+                </div>
+
+                <div class="order-details">
+                    <h3>Order Details</h3>
+                    <ul>
+                        <li>Quantity: <span class="quantity">1</span>
+                            <button class="decrease-btn">-</button>
+                            <button class="increase-btn">+</button>
+                        </li>
+                        <li>Color: <span class="selected-color">Brown</span></li>
+                        <li>Size: <span class="selected-size">L</span></li>
+                        <li>Price: <span class="price">$1,798.00</span></li>
+                        <li>Discount: <span class="discount">-10% ($179.8)</span></li>
+                        <li>Delivery: <span class="delivery">REGULAR</span></li>
+                    </ul>
+                    <textarea placeholder="Write a note..."></textarea>
+                    <button class="apply-coupon" style="background-color:#176717;">APPLY COUPON</button>
+                </div>
+
+                <p class="subtotal">Sub Total: <span>$1,622.19</span></p>
+
+                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Description</h3>
+            <p>Top in sweatshirt fabric made from a cotton blend with a soft brushed inside. Relaxed fit with dropped shoulders, long sleeves and ribbing around the neckline, cuffs and hem. Small metal text appliqu...</p>
+            <a href="#">Read more</a>
+        </div>
+
+        <div class="related-products">
+            <h2>You Might Also Like</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="saree image/choli-2.webp" alt="Product 4">
+                    <a href="Wedding Lehenga.html">lengha choli</a>
+                    <p>$199.00</p>
+                </div>
+                <div class="product">
+                    <img src="saree image/choli-3.webp" alt="Product 5">
+                    <a href="Wedding Lehenga.html">lengha choli</a>
+                    <p>$144.00</p>
+                </div>
+                <div class="product">
+                    <img src="saree image/choli-4.webp" alt="Product 6">
+                    <a href="Wedding Lehenga.html">lengha choli</a>
+                    <p>$166.00</p>
+                </div>
+                <div class="product">
+                    <img src="saree image/choli-1.webp" alt="Product 7">
+                    <a href="Wedding Lehenga.html">lengha choli</a>
+                    <p>$150.00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   
+
+    <script>
+        // Change main image when thumbnail is clicked
+const thumbnails = document.querySelectorAll('.thumbnail-images img');
+const mainImage = document.querySelector('.main-image');
+
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+        mainImage.src = thumbnail.src.replace('thumb', '');  // Replace "thumb" in thumbnail image to main image
+    });
+});
+
+// Adjust quantity of product
+const decreaseBtn = document.querySelector('.decrease-btn');
+const increaseBtn = document.querySelector('.increase-btn');
+const quantity = document.querySelector('.quantity');
+const price = document.querySelector('.price');
+const subtotal = document.querySelector('.subtotal span');
+const discount = document.querySelector('.discount');
+
+// Decrease quantity
+decreaseBtn.addEventListener('click', () => {
+    if (parseInt(quantity.textContent) > 1) {
+        quantity.textContent = parseInt(quantity.textContent) - 1;
+        updatePrice();
+    }
+});
+
+// Increase quantity
+increaseBtn.addEventListener('click', () => {
+    quantity.textContent = parseInt(quantity.textContent) + 1;
+    updatePrice();
+});
+
+// Update price based on quantity
+function updatePrice() {
+    const itemPrice = 150;  // Example item price
+    const discountAmount = 179.8; // Example discount
+    const totalPrice = itemPrice * parseInt(quantity.textContent) - discountAmount;
+    price.textContent = `$${totalPrice.toFixed(2)}`;
+    subtotal.textContent = `$${totalPrice.toFixed(2)}`;
+}
+
+    </script>
+ <footer style="padding-top: 50px;">
+    
+    <div class="foot-panel1">
+    <div class="fname">KARAGIRI</div>
+        <table>
+            <tr>
+              <th>Popular searches</th>
+              <th>QUICK LINKS</th>
+              <th>Customer Service</th>
+            
+            </tr>
+            <tr>
+              <td>wedding Collection</td>
+              <td>About Us</td>
+              <td>Shipping Police</td>
+            </tr>
+            <tr>
+                <td>Kanjivaram Saree</td>
+                <td>Contact Us</td>
+                <td>Privacy Policy</td>
+            </tr>
+            <tr>
+                <td>Paithani Saree</td>
+                <td>Media</td>
+                <td>Returns & Exchange Policy</td>
+            </tr>
+            <tr>
+                <td>Lines Saree</td>
+                <td>FAQs/Help</td>
+                <td>Raise a Retuns Request </td>
+            </tr>
+            
+              <tr>
+                <td>Silk Saree</td>
+                <td>Karagiri Heritage</td>
+              </tr>
+              
+              <tr>
+                <td>Blogs</td>
+                <td>Terms & Collections</td>
+              </tr>       
+               <tr>           
+              <td>Track your Order</td>
+            </tr>
+          </table>
+          <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+
+
+
+
+    </div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
